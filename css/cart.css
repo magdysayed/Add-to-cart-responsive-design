@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(247, 188, 79);
+}
+
+.container {
+    width: 90%; /* Adjusted for smaller screens */
+    max-width: 1200px; /* Set a max width */
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjusted padding */
+}
+
+.header .logo {
+    font-weight: bold;
+}
+
+.header .search-container {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.header .search-container input {
+    width: 100%;
+    padding: 10px 40px 10px 30px; /* Adjust padding for icon space */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.header .search-icon {
+    position: absolute; /* Absolute positioning */
+    left: 10px; /* Position the icon inside the input */
+    top: 50%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    color: #aaa; /* Icon color */
+}
+
+.header .icons {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center the icons vertically */
+}
+
+.header .icons ul {
+    list-style: none;
+    display: flex; /* Keep the icons in a single row */
+    margin: 0;
+    padding: 0;
+}
+
+.header .icons ul li {
+    margin-left: 20px; /* Space between icons */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.main {
+    padding: 20px;
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: row; /* Default to row layout */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.items {
+    width: 70%;
+    padding: 20px; /* Add padding to the items section */
+}
+
+.item {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between item details and delete button */
+    border: 1px solid #ddd; /* Light border for separation */
+    padding: 15px; /* Increase padding for a better look */
+    margin: 10px 0; /* Space between items */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for items */
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
+}
+
+.item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.item img {
+    width: 100px; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between image and details */
+    border-radius: 4px; /* Slightly rounded image */
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    flex-grow: 1; /* Allow details to take remaining space */
+}
+
+.item-details h4 {
+    margin: 0; /* Remove default margin */
+    color: #333; /* Dark color for text */
+}
+
+.item-price {
+    font-weight: bold; /* Emphasize price */
+    color: #e67e22; /* Different color for price */
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Space above quantity controls */
+}
+
+.quantity-control button {
+    padding: 5px 10px; /* Padding for buttons */
+    border: none; /* Remove default border */
+    background-color: #3498db; /* Button color */
+    color: white; /* Text color */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover effect */
+    margin: 0 5px; /* Space between buttons */
+}
+
+.quantity-control button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
+
+.quantity-input {
+    width: 50px; /* Fixed width for input */
+    text-align: center; /* Center text */
+    margin: 0 10px; /* Margin around input */
+    border: none; /* Remove border */
+}
+
+.delete {
+    background-color: #e74c3c; /* Red background for delete */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Increased padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+    margin-left: 20px; /* Space between item details and button */
+}
+
+.delete:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.summary {
+    width: 25%;
+    padding: 20px;
+    border-left: 2px solid #ccc;
+}
+
+.summary h3 {
+    margin-bottom: 15px;
+}
+
+.summary label {
+    display: block;
+    margin-top: 10px;
+}
+
+.summary input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.apply-coupon {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.apply-coupon:hover {
+    background-color: #45a049;
+}
+
+.cart-total {
+    text-align: right;
+}
+
+.cart-total h3 {
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .cart-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .items {
+        width: 100%; /* Full width for items */
+    }
+
+    .summary {
+        width: 100%; /* Full width for summary */
+        border-left: none; /* Remove left border */
+        border-top: 2px solid #ccc; /* Add top border for separation */
+    }
+
+    .header .search-container {
+        margin: 10px 0; /* Add margin for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column; /* Stack header items vertically */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .header .icons ul {
+        flex-direction: column; /* Stack icons vertically */
+        align-items: flex-start; /* Align icons to start */
+    }
+
+    .header .icons ul li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Space between icons */
+    }
+
+    .quantity-input {
+        width: 40px; /* Adjust width for smaller screens */
+    }
+
+    .item img {
+        width: 80px; /* Adjust image size */
+    }
+
+    .summary h3 {
+        font-size: 1.2em; /* Increase size for readability */
+    }
+
+    .apply-coupon {
+        width: 100%; /* Full width for the apply button */
+    }
+}

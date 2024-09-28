@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Page</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/cart.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">Shop Logo</div>
+            <div class="search-container">
+                <input type="text" placeholder="Search items...">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+            <div class="icons">
+                <ul>
+                    <li>Icon1</li>
+                    <li>Icon2</li>
+                    <li>Icon3</li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main">
+            <div class="cart-content">
+                <div class="items"></div> <!-- Cart items will be dynamically generated here -->
+
+                <div class="summary">
+                    <h3>Summary</h3>
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" placeholder="Enter your country">
+                    
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" id="zip" placeholder="Enter your zip code">
+
+                    <label for="city">City:</label>
+                    <input type="text" id="city" placeholder="Enter your city">
+
+                    <label for="coupon">Coupon Code:</label>
+                    <input type="text" id="coupon" placeholder="Enter coupon code">
+                    <button class="apply-coupon">Apply</button>
+
+                    <div class="cart-total">
+                        <h3>Total: $0.00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="path/to/fontawesome.js"></script> <!-- Link to FontAwesome -->
+    <script src="js/cart.js"></script>
+</body>
+</html>

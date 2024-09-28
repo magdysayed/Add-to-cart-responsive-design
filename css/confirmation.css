@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(247, 188, 79);
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    margin-left: 30px;
+}
+
+.header .search-container {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.header .search-container input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.header .search-icon {
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+.header .icons {
+    width: 30%;
+}
+
+.header .icons ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.main {
+    width: 100%;
+    padding: 20px;
+}
+
+.confirmation-content {
+    padding: 20px;
+}
+
+.confirmation-content h2 {
+    margin-bottom: 20px;
+}
+
+.confirmation-content p {
+    margin-bottom: 15px;
+}
+
+.order-details {
+    margin-bottom: 20px;
+}
+
+.order-details .item {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white; /* Consistent background */
+}
+
+.item-image {
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    margin-right: 15px; /* Space between image and text */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.item-info {
+    flex-grow: 1; /* Allow item info to take remaining space */
+}
+
+.total {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.done {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.done:hover {
+    background-color: #2980b9;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header{
+        justify-content: space-around;
+        height: 70px;
+        align-items: center;
+    }
+    .header .search-container {
+        width: 50%; /* Adjust search container width on smaller screens */
+    }
+
+    .header .icons {
+        width: 100%; /* Adjust icons container width on smaller screens */
+    }
+
+    .header .icons ul {
+        justify-content: space-evenly; /* Align icons to the end on smaller screens */
+    }
+
+    .container {
+        width: 95%; /* Make container take more width on smaller screens */
+        margin: 20px auto; /* Adjust margin on smaller screens */
+    }
+
+    .main {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .confirmation-content h2 {
+        font-size: 1.5em; /* Adjust heading size on smaller screens */
+    }
+
+    .order-details .item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .item-image {
+        width: 40px; /* Adjust image size on smaller screens */
+        height: 40px; /* Adjust image size on smaller screens */
+    }
+
+    .done {
+        width: 100%; /* Make done button full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header .search-container {
+        width: 70%; /* Further adjust search container width */
+    }
+
+    .header .icons {
+        width: 70%; /* Further adjust icons container width */
+    }
+
+    .done {
+        padding: 15px; /* Increase padding on done button */
+    }
+}

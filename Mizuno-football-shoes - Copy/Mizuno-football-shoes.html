@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Mizuno-football-shoes.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="box">
+            <a href="../football.home.page.html">
+                <ion-icon name="home-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="box">
+            <input type="text" id="search-input" placeholder="Search Full Court Specialist Basketball Store" oninput="searchProducts()">
+            <a href="#">
+                <ion-icon name="search-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="box">
+            <a href="../cart.html">
+                <ion-icon name="cart-outline"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <h1 class="title-shop">MEN SHOES</h1>
+    <div class="main bd-grid">
+        <div class="card" data-name="Morelia Neo IV">
+            <a href="Mizuno-football-shoes-page/Morelia Neo IV/Morelia-Neo-IV.html">
+            <div class="card__img">
+                <img src="image/img1.png" alt="" >
+            </div>
+            <div class="card__name" >
+                <p>Morelia Neo IV</p>
+            </div>
+            <div class="card__precis">
+                <a href="../home-page-folder/like page/like.html" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                
+                <div>
+                    <span class="card__preci card__preci--before">$215.00</span>
+                    <span class="card__preci card__preci--now">$195.00</span>
+                </div>
+                <a href="../home-page-folder/Add to cart page/Add-to-cart.html" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+            </a>
+        </div>
+
+        <div class="card" data-name="Alpha Elite FG">
+            <a href="Mizuno-football-shoes-page/Mizuno Alpha Elite/Mizuno-Alpha-Elite.html">
+            <div class="card__img">
+                <img src="image/img2.png" alt="" class="">
+            </div>
+            <div class="card__name">
+                <p>Alpha Elite FG</p>
+            </div>
+            <div class="card__precis">
+                <a href="../home-page-folder/like page/like.html" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                <div>
+                    <span class="card__preci card__preci--before">$205.00</span>
+                    <span class="card__preci card__preci--now">$170.00</span>
+                </div>
+                <a href="../home-page-folder/Add to cart page/Add-to-cart.html" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+            </a>
+        </div>
+
+        <div class="card" data-name="Morelia II Elite">
+            <a href="Mizuno-football-shoes-page/Morelia II Elite/Morelia-II-Elite.html">
+            <div class="card__img">
+                <img src="image/img3.png" alt="">
+            </div>
+            <div class="card__name">
+                <p>Morelia II Elite</p>
+            </div>
+            <div class="card__precis">
+                <a href="../home-page-folder/like page/like.html" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                
+                <div>
+                    <span class="card__preci card__preci--before">$180.00</span>
+                    <span class="card__preci card__preci--now">$150.00</span>
+                </div>
+                <a href="../home-page-folder/Add to cart page/Add-to-cart.html" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+            </a>
+        </div>
+
+        <div class="card" data-name="Morelia Neo 3">
+            <a href="Mizuno-football-shoes-page/Morelia Neo 3/Morelia-Neo-3.html">
+            <div class="card__img">
+                <img src="image/img4.png" alt="">
+            </div>
+            <div class="card__name">
+                <p>Morelia Neo 3</p>
+            </div>
+            <div class="card__precis">
+                <a href="../home-page-folder/like page/like.html" class="card__icon" ><ion-icon name="heart-outline"></ion-icon></a>
+                
+                <div>
+                    <span class="card__preci card__preci--before">$190.00</span>
+                    <span class="card__preci card__preci--now">$165.00</span>
+                </div>
+                <a href="../home-page-folder/Add to cart page/Add-to-cart.html" class="card__icon"><ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+    <!-- ICONS -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="../products page/products.js"></script>
+    <script>
+        function searchProducts() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const productCards = document.querySelectorAll('.card');
+
+            productCards.forEach(card => {
+                const productName = card.getAttribute('data-name').toLowerCase();
+                if (productName.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                } 
+            });
+        }
+    </script>
+</body>
+</html>

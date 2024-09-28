@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- start of header -->
+        <div class="header">
+            <div class="logo">logo</div>
+            <div class="icons">
+                <ul>
+                    <li>icon1</li>
+                    <li>icon2</li>
+                    <li>icon3</li>
+                </ul>
+            </div>
+        </div>
+        <!-- end of header -->
+        
+        <!-- start of main -->
+        <div class="main">
+            <div class="topsection">
+                <div class="steps">
+                    <i class="fa-solid fa-cart-shopping cart "></i>
+                    <i class="fa-solid fa-truck delivery"></i>
+                    <i class="fa-solid fa-truck payment active"></i>
+                    <i class="fa-solid fa-check true"></i>
+                </div>
+                <div class="summary">
+                    <h2>Summary</h2>
+                </div>
+            </div>
+            
+            <div class="lowerSection">
+                <div class="getInformation">
+                    <h3>Payment Information</h3>
+                    <form class="payment-form" id="payment-form" action="confirmation.html" method="post">
+                        <label for="card-holder">Card Holder Name:</label>
+                        <input type="text" id="card-holder" name="card-holder" required>
+
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" name="card-number" required>
+
+                        <label for="expiration-date">Expiration Date (MM/YY):</label>
+                        <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" required>
+
+                        <input class="submit" type="submit" value="Submit Payment">
+                    </form>
+                </div>
+                
+                <div class="items">
+                    <h3>Items in Your Cart</h3>
+                    <!-- Dynamic cart items will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/payment.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

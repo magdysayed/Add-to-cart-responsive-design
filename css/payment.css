@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(247, 188, 79);
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.container .header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header .logo {
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.container .header .icons {
+    width: 30%;
+}
+
+.container .header .icons ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.container .main {
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: rgb(204, 204, 204);
+}
+
+.container .main .topsection {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .main .topsection .steps {
+    width: 50%;
+    height: 3px;
+    background-color: gray;
+    position: relative;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .main .topsection .steps i {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    top: -15px;
+    color: gray;
+    cursor: pointer;
+}
+
+.container .main .topsection .steps i.active {
+    color: orange;
+}
+
+.container .main .topsection .steps i.cart::after,
+.container .main .topsection .steps i.delivery::after,
+.container .main .topsection .steps i.payment::after,
+.container .main .topsection .steps i.true::after {
+    content: attr(data-label);
+    position: absolute;
+    top: 45px;
+    left: -5px;
+    color: black;
+    text-transform: lowercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.container .main .topsection .summary {
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+}
+
+.container .main .topsection .summary::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+}
+
+.container .main .topsection .summary h2 {
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.container .lowerSection {
+    width: 100%;
+    height: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .lowerSection .getInformation {
+    width: calc(70% - 60px);
+    height: calc(100% - 40px);
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.container .lowerSection .getInformation form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .lowerSection .getInformation label {
+    margin-top: 10px;
+}
+
+.container .lowerSection .getInformation input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container .lowerSection .getInformation .submit {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container .lowerSection .getInformation .submit:hover {
+    background-color: #45a049;
+}
+
+.container .lowerSection .items {
+    width: calc(30% - 40px);
+    height: calc(100% - 40px);
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.container .lowerSection .items h3 {
+    margin-bottom: 15px;
+}
+
+.container .lowerSection .items .item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.container .lowerSection .items .item img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.container .lowerSection .items .item-details h4 {
+    margin: 0;
+    color: #333;
+}
+
+.container .lowerSection .items .item-details p {
+    margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .container .header .icons {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .container .main .topsection .summary {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .container .lowerSection {
+        flex-direction: column;
+    }
+
+    .container .lowerSection .getInformation,
+    .container .lowerSection .items {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .main .topsection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .main .topsection .steps {
+        width: 100%;
+        left: 0;
+    }
+
+    .container .main .topsection .summary {
+        width: 100%;
+    }
+
+    .container .lowerSection .getInformation,
+    .container .lowerSection .items {
+        padding: 10px;
+    }
+}

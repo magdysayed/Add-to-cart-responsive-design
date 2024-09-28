@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(247, 188, 79);
+}
+
+.container {
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    margin-left: 30px;
+}
+
+.header .search-container {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.header .search-container input {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.header .search-icon {
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+.header .icons {
+    width: 30%;
+}
+
+.header .icons ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.main {
+    width: 100%;
+    padding: 20px;
+}
+
+.delivery-content {
+    padding: 20px;
+}
+
+.delivery-content h2 {
+    margin-bottom: 20px;
+}
+
+.delivery-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-content label {
+    margin-top: 15px;
+}
+
+.delivery-content input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.delivery-content .submit {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delivery-content .submit:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Make container slightly wider on mobile */
+    }
+    .header .logo{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    }
+    .header .search-container {
+        width: 100%; /* Full width on mobile */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .header .icons {
+        width: 100%; /* Full width on mobile */
+        justify-content: space-evenly;
+    }
+
+    .header .icons ul {
+        justify-content: space-evenly;/* Center icons in mobile view */
+        margin-right: 0;
+    }
+
+    .delivery-content {
+        padding: 10px; /* Less padding on mobile */
+    }
+
+    .delivery-content h2 {
+        font-size: 24px; /* Smaller heading size on mobile */
+    }
+
+    .delivery-content input {
+        font-size: 14px; /* Adjust input font size for readability */
+    }
+
+    .delivery-content .submit {
+        padding: 8px; /* Smaller button on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        }
+
+    .header .search-container {
+        margin: 5px 0; /* Reduce margin for search container */
+    }
+
+    .header .icons ul {
+        flex-direction: column; /* Stack icons vertically */
+        align-items: center; /* Center icons */
+    }
+
+    .delivery-content h2 {
+        font-size: 20px; /* Smaller heading size for smaller devices */
+    }
+
+    .delivery-content input {
+        font-size: 12px; /* Smaller input font size */
+    }
+
+    .delivery-content .submit {
+        padding: 6px; /* Further adjust button size */
+    }
+}
